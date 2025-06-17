@@ -275,7 +275,7 @@ Epoch 500: FID = -2.9710560942849127e, d_loss = 1.1980516910552979, g_loss = 0.8
 
 The graph shows that the FID score quickly drops from a very high value to below 100 and then remains relatively stable. This indicates that the generator improved rapidly and then remained at a consistent level. This is a good sign, indicating that the GAN can produce high-quality images. [2](https://www.researchgate.net/profile/Yu-Yu-120/publication/354269184_Frechet_Inception_Distance_FID_for_Evaluating_GANs/links/612f01912b40ec7d8bd87953/Frechet-Inception-Distance-FID-for-Evaluating-GANs.pdf)
 
-![Filtered FID Score](/images/filtered_fid_scores.png)
+![Filtered FID Score](/hugfolio/images/filtered_fid_scores.png)
 
 ### Generator and Discriminator Loss over Epochs
 
@@ -283,13 +283,13 @@ The graph shows that the FID score quickly drops from a very high value to below
 - The discriminator loss (blue line) is relatively constant, fluctuating slightly around 1. This shows that the discriminator is working consistently and has difficulty distinguishing real from fake images, which is normal in a balanced GAN.
 - The generator loss (orange line) drops quickly at the beginning and then stabilizes at a low level. A low generator loss is desirable as it indicates that the generator can produce images that the discriminator finds hard to distinguish.
 
-![Generator and Discriminator Loss](/images/gan_losses.png)
+![Generator and Discriminator Loss](/hugfolio/images/gan_losses.png)
 
 ### Generated Image at 500 Epochs
 
 The image below shows the generated image from the GAN at epoch 500.
 
-![Generated Image at 500](/images/generated_images_epoch500.png)
+![Generated Image at 500](/hugfolio/images/generated_images_epoch500.png)
 
 ## Summary
 

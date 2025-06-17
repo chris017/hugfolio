@@ -7,7 +7,7 @@ BookToC: false
 
 # 👋 Welcome to my Portfolio / Dev Note
 <div style="float: right; width: 150px; height: 150px; border: 3px solid #000; border-radius: 50%; overflow: hidden; margin-left: 20px;">
-  <img src="/images/Christian.png" 
+  <img src="images/profile.png" 
        style="width: 100%; height: 100%; object-fit: cover; object-position: top left;" 
        alt="Christian Schmid Avatar">
 </div>
