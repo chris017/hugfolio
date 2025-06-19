@@ -16,9 +16,11 @@ The goal of the generator is to deceive the discriminator by producing data that
 The loss function of a GAN is described by the following equation [1](https://ieeexplore.ieee.org/abstract/document/9625798?casa_token=74ktz8Hg_jMAAAAA:Zoqv-XGMM2ly9AQ82I1G9gDKCivEyzB_LIccyX8rhRCctl5WMbPSBAS2zo8TueoOTh286vNwF4Q)
 :
 
+<div class="katex-wrapper">
 {{< katex display=true >}}
 \min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}(x)} \left[ \log D(x) \right] + \mathbb{E}_{z \sim p_z(z)} \left[ \log \left(1 - D(G(z)) \right) \right]
 {{< /katex >}}
+</div>
 
 
 ### Why Use Fréchet Inception Distance (FID) in My Code
@@ -29,9 +31,11 @@ The Fréchet Inception Distance (FID) is a metric commonly used to evaluate the 
 
 The FID calculates the difference in the means and covariances between the real and generated data distributions. This difference is quantified using the following formula [2](https://www.researchgate.net/profile/Yu-Yu-120/publication/354269184_Frechet_Inception_Distance_FID_for_Evaluating_GANs/links/612f01912b40ec7d8bd87953/Frechet-Inception-Distance-FID-for-Evaluating-GANs.pdf):
 
+<div class="katex-wrapper">
 {{< katex display=true >}}
 \text{FID} = \left\| \mu_r - \mu_g \right\|^2 + \text{Tr}\left( \Sigma_r + \Sigma_g - 2\left( \Sigma_r \Sigma_g \right)^{1/2} \right)
 {{< /katex >}}
+</div>
 
 where {{< katex >}}\mu_r{{< /katex >}} and {{< katex >}}\Sigma_r{{< /katex >}} are the mean and covariance matrix of the real data, and {{< katex >}}\mu_r{{< /katex >}} and {{< katex >}}\Sigma_r{{< /katex >}} are the corresponding parameters of the generated data. The FID is often calculated using features extracted from a pre-trained Inception network, which enhances the robustness and reliability of the evaluation.
 
@@ -303,3 +307,12 @@ Overall, these results show that the GAN can generate high-quality images. There
 [1] J. Gui, Z. Sun, Y. Wen, D. Tao and J. Ye, "A Review on Generative Adversarial Networks: Algorithms, Theory, and Applications," in IEEE Transactions on Knowledge and Data Engineering, vol. 35, no. 4, pp. 3313-3332, 1 April 2023, doi: 10.1109/TKDE.2021.3130191. URL: https://ieeexplore.ieee.org/abstract/document/9625798?casa_token=74ktz8Hg_jMAAAAA:Zoqv-XGMM2ly9AQ82I1G9gDKCivEyzB_LIccyX8rhRCctl5WMbPSBAS2zo8TueoOTh286vNwF4Q
 
 [2] Yu, Yu, Weibin Zhang, and Yun Deng. "Frechet inception distance (fid) for evaluating gans." China University of Mining Technology Beijing Graduate School 3 (2021). URL: https://www.researchgate.net/profile/Yu-Yu-120/publication/354269184_Frechet_Inception_Distance_FID_for_Evaluating_GANs/links/612f01912b40ec7d8bd87953/Frechet-Inception-Distance-FID-for-Evaluating-GANs.pdf
+
+<style>
+.katex-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0;
+  max-width: 100%;
+}
+</style>
